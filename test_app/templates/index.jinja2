@@ -5,7 +5,8 @@
   {{ stylesheet_tag('app_css') | safe }}
 </head>
 <body ng-app="app" ng-controller="AppController">
-<p id="hello">Hello (without javascript)</p>
+    <p id="hello">Segments API client</p>
+    <p ng-repeat="shopper in shoppers">{[ shopper ]}</p>
 <!--<img src="{{ asset_url_for('images/dog/no-idea.jpg') }}"
 width="600" height="434" alt="No idea">-->
 
