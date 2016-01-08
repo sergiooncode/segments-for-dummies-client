@@ -5,5 +5,4 @@ To install the app do:
 - Go to the top directory `test_app`.
 - Create a virtual environment: `virtualenv env`.
 - Install the python dependencies: `env/bin/pip install -r requirements`.
-- Install the webpack dependencies `npm install`.
-- 
+- Install the webpack dependencies `npm install`. 
