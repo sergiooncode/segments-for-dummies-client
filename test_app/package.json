@@ -4,13 +4,14 @@
     "build": "node_modules/.bin/webpack --progress --profile --colors"
   },
   "dependencies": {
-    "script-loader": "^0.6.1",
+    "angular-ui-router": "^0.2.15",
     "css-loader": "^0.14.4",
-    "style-loader": "^0.12.3",
-    "image-webpack-loader": "^1.4.0",
-    "file-loader": "^0.8.4",
     "extract-text-webpack-plugin": "^0.8.1",
+    "file-loader": "^0.8.4",
+    "image-webpack-loader": "^1.4.0",
     "manifest-revision-webpack-plugin": "^0.0.5",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.12.3",
     "webpack": "^1.9.10",
     "webpack-dev-server": "^1.9.0"
   }
