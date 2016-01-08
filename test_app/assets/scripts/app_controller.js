@@ -1,7 +1,14 @@
 angular.module('app').
     controller('AppController',
-              ['$scope',
-              function($scope) {
-var ele = document.getElementById('hello');
-ele.innerHTML = 'Hello (with javascript)';
+              ['$scope', '$http',
+              function($scope, $http) {
+    return $http.jsonp('http://localhost:4000/api/shoppers', {
+    }).then(
+     response => {
+         return response.data
+     },
+     response => {
+         return response
+     }
+    );
 }]);
