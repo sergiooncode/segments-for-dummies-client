@@ -8,7 +8,8 @@ var rootAssetPath = './assets';
 module.exports = {
     entry: {
         app_js: [
-            rootAssetPath + '/scripts/entry.js'
+            rootAssetPath + '/scripts/app.js',
+            rootAssetPath + '/scripts/app_controller.js'
         ],
         app_css: [
             rootAssetPath + '/styles/main.css'

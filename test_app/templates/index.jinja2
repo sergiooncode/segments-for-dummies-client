@@ -4,7 +4,7 @@
   <title>Test application</title>
   {{ stylesheet_tag('app_css') | safe }}
 </head>
-<body>
+<body ng-app="app" ng-controller="AppController">
 <p id="hello">Hello (without javascript)</p>
 <!--<img src="{{ asset_url_for('images/dog/no-idea.jpg') }}"
 width="600" height="434" alt="No idea">-->
