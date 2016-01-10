@@ -6,11 +6,11 @@
 </head>
 <body ng-app="app" ng-controller="AppController">
     <p id="hello">Segments API client</p>
-    <p ng-repeat="shopper in shoppers">{[ shopper ]}</p>
-<!--<img src="{{ asset_url_for('images/dog/no-idea.jpg') }}"
-width="600" height="434" alt="No idea">-->
+    <div ng-repeat="shopper in data">
+	    <p>{[ shopper.name  ]}</p>
+    </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-{{ javascript_tag('app_js') | safe }}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    {{ javascript_tag('app_js') | safe }}
 </body>
 </html>
