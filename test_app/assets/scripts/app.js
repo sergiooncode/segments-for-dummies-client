@@ -1,6 +1,6 @@
 angular.module('app', []);
 
-angular.module('app').config(['$interpolateProvider', function($interpolateProvider) {
+angular.module('app').config(['$interpolateProvider', '$httpProvider', function($interpolateProvider, $httpProvider) {
     $interpolateProvider.startSymbol('{[');
     $interpolateProvider.endSymbol(']}');
 }]);
