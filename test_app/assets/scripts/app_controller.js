@@ -1,20 +1,11 @@
 angular.module('app').
     controller('AppController',
-              ['$scope', '$http',
-              function($scope, $http) {
+              ['$scope','DataService',
+              function($scope, DataService) {
 
-    /**$scope.shoppers = function() {
-        return $http.jsonp('http://localhost:4000/api/shoppers', {
-        }).then(
-          response => {
-              return response.data;
-          },
-          response => {
-              return response;
-          }
-        );
-    };**/
-
-    $scope.shoppers = ['one shopper', 'another shopper'];
+    DataService.getData().then(function(data) {
+	    $scope.data = data;
+    });
+    /**$scope.shoppers = ['one shopper', 'another shopper'];**/
 
 }]);

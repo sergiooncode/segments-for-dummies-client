@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         app_js: [
             rootAssetPath + '/scripts/app.js',
-            rootAssetPath + '/scripts/app_controller.js'
+            rootAssetPath + '/scripts/app_controller.js',
+	    rootAssetPath + '/scripts/data_service.js',
         ],
         app_css: [
             rootAssetPath + '/styles/main.css'
