@@ -1,4 +1,4 @@
-from flask import Flask, make_response, render_template
+from flask import Flask, render_template
 from werkzeug.serving import run_simple
 
 from flask_webpack import Webpack
@@ -35,9 +35,7 @@ app = create_app()
 
 @app.route('/')
 def index():
-    resp = make_response(render_template('index.jinja2'))
-    resp.headers.set('Access-Control-Allow-Origin', '*')
-    return resp
+    return render_template('index.jinja2')
 
 if __name__ == '__main__':
     run_simple('localhost', 5000, app, use_reloader=True, use_debugger=True)

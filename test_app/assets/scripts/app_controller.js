@@ -4,7 +4,7 @@ angular.module('app').
               function($scope, DataService) {
 
     DataService.getData().then(function(data) {
-	    $scope.data = data;
+	    $scope.data = data.data;
     });
     /**$scope.shoppers = ['one shopper', 'another shopper'];**/
 
