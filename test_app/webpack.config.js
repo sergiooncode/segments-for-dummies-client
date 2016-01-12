@@ -6,6 +6,8 @@ var ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
 var rootAssetPath = './assets';
 
 module.exports = {
+    context: __dirname,
+
     entry: {
         app_js: [
             rootAssetPath + '/scripts/app.js',
@@ -23,12 +25,17 @@ module.exports = {
         chunkFilename: '[id].[chunkhash].js'
     },
     resolve: {
+	root: __dirname + '/scripts/',
+	modulesDirectories: ['node_modules'],
         extensions: ['', '.js', '.css']
     },
     module: {
         loaders: [
             {
                 test: /\.js$/i, loader: 'babel-loader',
+		query: {
+			presets: ['es2015']
+		},
                 exclude: /node_modules/
             },
             {
